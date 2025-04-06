@@ -1,18 +1,20 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <memory>
 
 using namespace std;
 
 class Organizational_Entity{
-protected:
-    string name;
-    vector<Organizational_Entity*> sub_entities;
+private:
+    vector<shared_ptr<Organizational_Entity>> sub_entities;
 public:
     Organizational_Entity(string& n);
 
+    string name;
+
     string get_name();
-    void add_entity(Organizational_Entity* sub_entity);
+    void add_entity(shared_ptr<Organizational_Entity> sub_entity);
     int count();
 
     virtual ~Organizational_Entity();

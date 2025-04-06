@@ -1,21 +1,24 @@
 #include "Organizational_Entity.hpp"
+#include "Employee.hpp"
 
-class Middle_Manager; class Senior_Manager; class Company;
 
 class Central_Regional : public Organizational_Entity{
 private:
-    vector<string> countries;
     int employee_amount;
-    vector<Middle_Manager*> mid_managers;
-    vector<Senior_Manager*> high_managers;
-    vector<Company*> companies;
+    vector<shared_ptr<Employee>> mid_managers;
+    vector<shared_ptr<Employee>> high_managers;
+    vector<shared_ptr<Organizational_Entity>> companies;
 public:
     Central_Regional(string n);
 
+    vector<string> countries;
+
     int get_employee_amount();
     vector<string> get_company_names();
-    vector<Middle_Manager*> get_mid_managers();
-    vector<Senior_Manager*> get_high_managers();
+    vector<shared_ptr<Employee>> get_mid_managers();
+    vector<shared_ptr<Employee>> get_high_managers();
+    void add_mid_manager(shared_ptr<Employee> manager);
+    void add_high_manager(shared_ptr<Employee> manager);
 
     ~Central_Regional() override;
 };
