@@ -12,4 +12,15 @@ vector<string> Central_Regional::get_company_names(){
     return names;
 }
 
+vector<string> Central_Regional::get_company_names(){
+
+}
+
+vector<Middle_Manager*> Central_Regional::get_mid_managers(){
+
+}
+
+vector<Senior_Manager*> Central_Regional::get_high_managers(){
+
+}
 
