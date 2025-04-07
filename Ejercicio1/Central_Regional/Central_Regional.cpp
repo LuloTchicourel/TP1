@@ -4,9 +4,9 @@ Central_Regional::Central_Regional(string n) : Organizational_Entity(n) {}
 
 int Central_Regional::get_employee_amount() {return employee_amount;}
 
-vector<string> Central_Regional::get_company_names(){
-    vector<string> names;
-    for (int i = 0; i < companies.size(); i++) names.push_back(companies[i]->name);
+set<string> Central_Regional::get_company_names(){
+    set<string> names;
+    for (auto it = companies.begin(); it != companies.end(); ++it) names.insert((*it)->name);
     return names;
 }
 

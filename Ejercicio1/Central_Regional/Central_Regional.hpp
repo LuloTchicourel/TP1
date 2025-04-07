@@ -7,14 +7,14 @@ private:
     int employee_amount;
     vector<shared_ptr<Employee>> mid_managers;
     vector<shared_ptr<Employee>> high_managers;
-    vector<shared_ptr<Organizational_Entity>> companies;
+    set<shared_ptr<Organizational_Entity>> companies;
 public:
     Central_Regional(string n);
 
-    vector<string> countries;
+    set<string> countries;
 
     int get_employee_amount();
-    vector<string> get_company_names();
+    set<string> get_company_names();
     vector<shared_ptr<Employee>> get_mid_managers();
     vector<shared_ptr<Employee>> get_high_managers();
     void add_mid_manager(shared_ptr<Employee> manager);
