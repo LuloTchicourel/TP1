@@ -9,6 +9,9 @@ public:
 
     string name;
 
+    void change_name(string new_name);
+    void add_department(shared_ptr<Department> new_department);
+    void remove_department(shared_ptr<Department> new_department);
     shared_ptr<Department> get_department(string dep);
     vector<string> get_department_names();
 

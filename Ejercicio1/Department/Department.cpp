@@ -4,7 +4,19 @@ Department::Department(string n, string l){
     name = n; location = l;
 }
 
+void Department::update_location(string new_location){
+    location = new_location;
+    cout << "Department location updated to: " << location << endl;
+}
+
+void Department::change_name(string new_name){
+    name = new_name;
+    cout << "Department name changed to: " << name << endl;
+}
+
 int Department::employee_count() {return employee_amount;}
+
+int Department::local_employee_count() {return employees.size();}
 
 vector<shared_ptr<Employee>> Department::get_employees() {return employees;}
 
