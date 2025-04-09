@@ -1,5 +1,7 @@
 #include "Department.hpp"
 
+int Department::employee_amount = 0;
+
 Department::Department(string n, string l){
     name = n; location = l;
 }
@@ -39,3 +41,5 @@ bool Department::fire(shared_ptr<Employee> employee){
     cout << "Employee not found..." << endl;
     return false;
 }
+
+Department::~Department() {}

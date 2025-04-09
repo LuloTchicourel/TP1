@@ -1,3 +1,4 @@
+#pragma once
 #include "Manager.hpp"
 
 class Team_Leader : public Manager {

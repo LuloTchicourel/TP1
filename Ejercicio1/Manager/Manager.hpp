@@ -1,3 +1,4 @@
+#pragma once
 #include "Employee.hpp"
 
 enum class Levels {HIGH, MID, LOW, TL};

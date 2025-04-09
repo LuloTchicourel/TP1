@@ -35,3 +35,4 @@ void Employee::change_name(string new_name){
     cout << "Name updated successfully to: " << name << endl;
 }
 
+Employee::~Employee() {}

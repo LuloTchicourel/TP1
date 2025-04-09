@@ -1,3 +1,4 @@
+#pragma once
 #include <iostream>
 #include <string>
 #include <vector>
@@ -10,7 +11,6 @@ class Department{
 private:
     vector<shared_ptr<Employee>> employees;
     static int employee_amount;
-    int local_employee_amount;
 public:
     Department(string n, string l);
 

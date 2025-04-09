@@ -1,3 +1,4 @@
+#pragma once
 #include "Manager.hpp"
 
 class Low_Manager : public Manager {

@@ -1,3 +1,4 @@
+#pragma once
 #include "Manager.hpp"
 
 class Middle_Manager : public Manager {

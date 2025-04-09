@@ -1,10 +1,12 @@
 #include "Company.hpp"
 
-Company::Company(string n) : Organizational_Entity(n) {}
+Company::Company(const string& n, string add) : Organizational_Entity(n){
+    address = add;
+}
 
-void Company::change_name(string new_name){
-    name = new_name;
-    cout << "Company name changed to: " << name << endl;
+void Company::change_address(string new_address){
+    address = new_address;
+    cout << "Company address changed to: " << address << endl;
 }
 
 void Company::add_department(shared_ptr<Department> new_department){
@@ -27,6 +29,7 @@ shared_ptr<Department> Company::get_department(string n){
         if (departments[i]->name == n) return departments[i];
     }
     cout << "Department not found..." << endl;
+    return nullptr;
 }
 
 vector<string> Company::get_department_names(){
@@ -34,3 +37,5 @@ vector<string> Company::get_department_names(){
     for(int i = 0; i < departments.size(); i++) names.push_back(departments[i]->name);
     return names;
 }
+
+Company::~Company() = default;

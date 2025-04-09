@@ -19,5 +19,8 @@ bool Manager::set_level(Levels lvl){
     // no se si hacer string para identificar o strings cualquiera
     // hago restringido c el enum class 'levels'
     level = lvl;
+    return true;
 }
+
+Manager::~Manager() {}
 
