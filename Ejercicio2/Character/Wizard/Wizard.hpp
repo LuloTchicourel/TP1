@@ -17,6 +17,7 @@ public:
 
     string get_name() override;
     void set_custom_name(string n) override;
+    float get_defence() override;
     float get_hp() override;
     string get_type() override;
     string show_weapons() override;
