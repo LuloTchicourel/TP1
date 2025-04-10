@@ -1,8 +1,9 @@
 #include "../Character.hpp"
 
 class Wizard : public Character {
-private:
-    bool alive;
+protected:
+    bool alive = true;
+    bool master;
     int threshold = 100;
     string name;
     float hp;
@@ -28,7 +29,7 @@ public:
     void show_weapons() override;
     void add_weapon(unique_ptr<Weapon> weapon) override;
     void remove_weapon(string n) override;
-    void add_xp(float xp);
+    void add_xp(float xp) override;
     Weapon* get_weapon_by_name(string& n) override;
     void display() override;
 

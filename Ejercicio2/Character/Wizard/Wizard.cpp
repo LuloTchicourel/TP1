@@ -108,7 +108,7 @@ void Wizard::add_xp(float xp) {
 Weapon* Wizard::get_weapon_by_name(string& n) {
     for (int i = 0; i < weapons.size(); i++) {
         if (weapons[i]->get_name() == n) {
-            return weapons[i].get(); // non-owning raw pointer
+            return weapons[i].get();
         }
     }
     return nullptr;

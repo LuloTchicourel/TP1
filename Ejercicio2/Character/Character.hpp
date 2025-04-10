@@ -10,6 +10,7 @@ public:
     virtual void set_custom_name(string n) = 0;
     virtual float get_defence() = 0;
     virtual float get_hp() = 0;
+    virtual void add_xp(float xp) = 0;
     virtual string get_type() = 0;
     virtual void show_weapons() = 0;
     virtual void add_weapon(unique_ptr<Weapon> weapon) = 0;
