@@ -23,17 +23,18 @@ void Combat_Weapon::add_xp(float xp){
         damage *= 1.1f;
         experience = (int)experience % 100;
         threshold += 10;
+        cout << name << " has leveled up! Now level " << level << "!" << endl;
     }
 }
 
-void Combat_Weapon::display(){
-    cout << "== Weapon Description ==\n" 
-    << "Type: " << type << endl;
+void Combat_Weapon::display() {
+    cout << "== Weapon Description ==\n";
+    cout << "Type: " << type << endl;
     if (enchanted) cout << "**ENCHANTED**" << endl;
-    cout << "Name: " << name << endl 
-    << "Weight: " << weight << endl 
-    << "Damage: " << damage << endl 
-    << "Level: " << level << endl 
-    << fixed << setprecision(1) 
-    << "XP to next level: " << threshold - experience << endl;
+    cout << "Name: " << name << endl;
+    cout << "Weight: " << weight << endl;
+    cout << "Damage: " << damage << endl;
+    cout << "Level: " << level << endl;
+    cout << "Experience: " << experience << "/" << threshold << endl;
+    cout << endl;
 }

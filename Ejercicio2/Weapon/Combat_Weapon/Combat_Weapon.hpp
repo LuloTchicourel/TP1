@@ -10,7 +10,7 @@ protected:
     float crit_chance;
     float crit_multi;
     string type = "Combat_Weapon";
-    int level = 0;
+    int level = 1;
     float experience = 0;
     bool enchanted;
 public:

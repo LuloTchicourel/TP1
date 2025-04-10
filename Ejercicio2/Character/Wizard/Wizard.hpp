@@ -2,10 +2,14 @@
 
 class Wizard : public Character {
 private:
+    bool alive;
+    int threshold = 100;
     string name;
     float hp;
     float intelligence;
     float defence;
+    int level = 1;
+    float experience = 0;
     string type = "Wizard";
     vector<unique_ptr<Weapon>> weapons;
 public:
@@ -16,13 +20,15 @@ public:
     void receive_damage(float dmg) override;
 
     string get_name() override;
+    bool is_alive() override;
     void set_custom_name(string n) override;
     float get_defence() override;
     float get_hp() override;
     string get_type() override;
-    string show_weapons() override;
+    void show_weapons() override;
     void add_weapon(unique_ptr<Weapon> weapon) override;
-    void remove_weapon(string t) override;
+    void remove_weapon(string n) override;
+    void add_xp(float xp);
     Weapon* get_weapon_by_name(string& n) override;
     void display() override;
 
