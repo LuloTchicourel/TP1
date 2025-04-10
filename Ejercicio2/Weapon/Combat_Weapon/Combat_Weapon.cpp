@@ -28,7 +28,7 @@ void Combat_Weapon::add_xp(float xp){
 }
 
 void Combat_Weapon::display() {
-    cout << "== Weapon Description ==\n";
+    cout << "== Combat Weapon Description ==\n";
     cout << "Type: " << type << endl;
     if (enchanted) cout << "**ENCHANTED**" << endl;
     cout << "Name: " << name << endl;

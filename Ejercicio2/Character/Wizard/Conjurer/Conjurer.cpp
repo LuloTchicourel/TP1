@@ -1,11 +1,11 @@
 #include "Conjurer.hpp"
 
-Conjurer::Conjurer(bool m){
-    name = "Conjurer"; intelligence = 72; defence = 0.11;
-    if(!m){
-        hp = 1300; master = m;
-    }
+Conjurer::Conjurer(bool m) {
+    intelligence = 72; defence = 0.11;
+    master = m; name = "Conjurer";
+    if (!m) hp = 1300;
     else {
-        hp = 1650; master = m;
+        hp = 1650;
+        name = "Master " + name;
     }
 }

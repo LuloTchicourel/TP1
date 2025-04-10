@@ -11,10 +11,7 @@ public:
     virtual string get_name() = 0;
     virtual void set_custom_name(string n) = 0;
     virtual float get_weight() = 0;
-    virtual float get_dmg() = 0;
     virtual string get_type() = 0;
-    virtual int get_level() = 0;
-    virtual void add_xp(float xp) = 0;
     virtual void display() = 0;
 
     virtual ~Weapon() = default;

@@ -1,11 +1,11 @@
 #include "Sorcerer.hpp"
 
-Sorcerer::Sorcerer(bool m){
-    name = "Sorcerer";  intelligence = 91; defence = 0.05;
-    if(!m){
-        hp = 1470; master = m;
-    }
+Sorcerer::Sorcerer(bool m) {
+    intelligence = 91; defence = 0.05;
+    master = m; name = "Sorcerer";
+    if (!m) hp = 1470;
     else {
-        hp = 1850; master = m;
+        hp = 1850;
+        name = "Master " + name;
     }
 }

@@ -19,11 +19,11 @@ public:
     string get_name() override;
     void set_custom_name(string n) override;
     float get_weight() override;
-    float get_dmg() override;
     string get_type() override;
-    int get_level() override;
-    void add_xp(float xp) override;
     void display() override;
+    float get_dmg();
+    int get_level();
+    void add_xp(float xp);
 
     ~Combat_Weapon() override = default;
 };
