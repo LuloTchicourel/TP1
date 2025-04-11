@@ -1,7 +1,7 @@
 #pragma once
 #include "../Warrior.hpp"
 
-class Barbarian : Warrior {
+class Barbarian : public Warrior {
 public:
     Barbarian(bool l = false);
 

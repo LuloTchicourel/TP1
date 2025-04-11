@@ -1,7 +1,7 @@
 #pragma once
-#include "Combat_Weapon.hpp"
+#include "../Combat_Weapon.hpp"
 
-class Axe : Combat_Weapon {
+class Axe : public Combat_Weapon {
 public:
     Axe(bool special = false);
 

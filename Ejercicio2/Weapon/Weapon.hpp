@@ -1,3 +1,4 @@
+#pragma once
 #include <iostream>
 #include <string>
 #include <vector>
@@ -5,9 +6,9 @@
 using namespace std;
 
 class Weapon {
-private:
-    virtual void upgrade() = 0;
 public:
+    Weapon() = default;
+
     virtual string get_name() = 0;
     virtual void set_custom_name(string n) = 0;
     virtual float get_weight() = 0;

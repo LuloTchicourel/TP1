@@ -3,9 +3,9 @@
 Paladin::Paladin(bool l) {
     strength = 12; defence = 0.8;
     lord = l; name = "Paladin";
-    if (!l) hp = 2100;
+    if (!l) {max_hp = 2100; hp = 2100;}
     else {
-        hp = 2650;
+        max_hp = 2650; hp = 2650;
         name = "Lord " + name;
     }
 }

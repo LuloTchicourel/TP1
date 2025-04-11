@@ -3,9 +3,9 @@
 Barbarian::Barbarian(bool l) {
     strength = 81; defence = 0.2;
     lord = l; name = "Barbarian";
-    if (!l) hp = 1650;
+    if (!l) {max_hp = 1650; hp = 1650;}
     else {
-        hp = 2100;
+        max_hp = 2100; hp = 2100;
         name = "Lord " + name;
     }
 }

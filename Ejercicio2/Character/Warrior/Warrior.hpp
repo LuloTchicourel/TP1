@@ -1,5 +1,7 @@
 #pragma once
 #include "../Character.hpp"
+#include "../../Weapon/Magic_Item/Magic_Item.hpp"
+#include "../../Weapon/Combat_Weapon/Combat_Weapon.hpp"
 
 class Warrior : public Character {
 protected:
@@ -8,12 +10,15 @@ protected:
     int threshold = 100;
     string name;
     float hp;
+    float max_hp;
     float strength;
     float defence;
     int level = 1;
     float experience = 0;
     string type = "Warrior";
     vector<unique_ptr<Weapon>> weapons;    
+
+    void apply_buff(string stat, float percent) override;
 public:
     Warrior();
 
@@ -30,9 +35,11 @@ public:
     void show_weapons() override;
     void add_weapon(unique_ptr<Weapon> weapon) override;
     void remove_weapon(string n) override;
-    void add_xp(float xp);
+    void add_xp(float xp) override;
     Weapon* get_weapon_by_name(string& n) override;
     void display() override;
 
     ~Warrior() override = default;
+
+    friend class Magic_Item;
 };

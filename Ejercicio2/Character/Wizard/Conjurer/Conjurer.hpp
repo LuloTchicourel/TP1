@@ -1,7 +1,7 @@
 #pragma once
 #include "../Wizard.hpp"
 
-class Conjurer : Wizard {
+class Conjurer : public Wizard {
 public:
     Conjurer(bool m = false);
 

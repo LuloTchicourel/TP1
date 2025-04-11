@@ -3,9 +3,9 @@
 Sorcerer::Sorcerer(bool m) {
     intelligence = 91; defence = 0.05;
     master = m; name = "Sorcerer";
-    if (!m) hp = 1470;
+    if (!m) {max_hp = 1470; hp = 1470;}
     else {
-        hp = 1850;
+        max_hp = 1850; hp = 1850;
         name = "Master " + name;
     }
 }

@@ -3,9 +3,9 @@
 Conjurer::Conjurer(bool m) {
     intelligence = 72; defence = 0.11;
     master = m; name = "Conjurer";
-    if (!m) hp = 1300;
+    if (!m) {max_hp = 1300; hp = 1300;}
     else {
-        hp = 1650;
+        max_hp = 1650; hp = 1650; 
         name = "Master " + name;
     }
 }
