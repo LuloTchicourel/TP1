@@ -54,9 +54,7 @@ int main(){
     unique_ptr<Character> character;
 
     if (character_answer.empty()){
-        cout << character_answer << endl;
         character = Character_Factory::create_random_character();
-        cout << character_answer << endl;
         if (weapon_answer.empty()){
             unique_ptr<Combat_Weapon> weapon = Character_Factory::create_random_weapon();
             character->add_weapon(std::move(weapon));
@@ -67,16 +65,13 @@ int main(){
     }
     else {
         string character_type = options[stoi(character_answer) % 8];
-        cout << character_type << endl;
-        cout << character_answer << endl;
+
         if (weapon_answer.empty()){
             unique_ptr<Combat_Weapon> w = Character_Factory::create_random_weapon();
-            cout << w->get_name();
             character = Character_Factory::create_character_by_type(character_type, w->get_name());
         } 
         else {
             string weapon_type = weapons[stoi(weapon_answer) % weapons.size()];
-            cout << weapon_type << endl;
             character = Character_Factory::create_character_by_type(character_type, weapon_type);
         }
     }
