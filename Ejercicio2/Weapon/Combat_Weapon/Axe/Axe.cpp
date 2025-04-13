@@ -11,6 +11,3 @@ Axe::Axe(bool special){
     }
 }
 
-void Axe::set_custom_name(const string& n) {name = n;}
-
-

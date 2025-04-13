@@ -32,5 +32,3 @@ void Amulet::use(){
     Magic_Item::apply_to("def", effect_strength);
     uses--;
 }
-
-void Amulet::set_custom_name(const string& n) {name = n;}

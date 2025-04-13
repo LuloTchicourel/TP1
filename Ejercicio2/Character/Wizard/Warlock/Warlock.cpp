@@ -9,5 +9,3 @@ Warlock::Warlock(bool m) {
         name = "Master " + name;
     }
 }
-
-void Warlock::set_custom_name(const string& n) {name = n;}

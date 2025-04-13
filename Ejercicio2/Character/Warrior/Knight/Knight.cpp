@@ -9,5 +9,3 @@ Knight::Knight(bool l) {
         name = "Lord " + name;
     }
 }
-
-void Knight::set_custom_name(const string& n) {name = n;}

@@ -11,4 +11,3 @@ Spear::Spear(bool special){
     }
 }
 
-void Spear::set_custom_name(const string& n) {name = n;}

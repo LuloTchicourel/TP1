@@ -9,5 +9,3 @@ Sorcerer::Sorcerer(bool m) {
         name = "Master " + name;
     }
 }
-
-void Sorcerer::set_custom_name(const string& n) {name = n;}

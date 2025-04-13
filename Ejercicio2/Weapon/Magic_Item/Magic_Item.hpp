@@ -28,7 +28,7 @@ public:
 
     string get_name() override;
     float get_weight() override;
-    virtual void set_custom_name(const string& n) = 0;
+    void set_custom_name(string n) override;
     string get_type() override;
     void display() override;
     void add_user(shared_ptr<Character> user);

@@ -15,6 +15,7 @@ public:
     virtual void receive_damage(float dmg) = 0;
     virtual string get_name() = 0;
     virtual bool is_alive() = 0;
+    virtual void set_custom_name(string n) = 0;
     virtual float get_defence() = 0;
     virtual float get_hp() = 0;
     virtual void add_xp(float xp) = 0;

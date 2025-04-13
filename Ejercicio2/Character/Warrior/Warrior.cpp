@@ -95,6 +95,8 @@ string Warrior::get_name() {return name;}
 
 bool Warrior::is_alive() {return alive;}
 
+void Warrior::set_custom_name(string n) {name = n;}
+
 float Warrior::get_hp() {return hp;}
 
 float Warrior::get_defence() {return defence;}

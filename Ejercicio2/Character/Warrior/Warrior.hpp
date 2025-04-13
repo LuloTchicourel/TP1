@@ -28,7 +28,7 @@ public:
 
     string get_name() override;
     bool is_alive() override;
-    virtual void set_custom_name(const string& n) = 0;
+    void set_custom_name(string n) override;
     float get_defence() override;
     float get_hp() override;
     string get_type() override;

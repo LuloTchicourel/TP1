@@ -9,5 +9,3 @@ Conjurer::Conjurer(bool m) {
         name = "Master " + name;
     }
 }
-
-void Conjurer::set_custom_name(const string& n) {name = n;}

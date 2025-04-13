@@ -5,6 +5,8 @@ Combat_Weapon::Combat_Weapon() {}
 
 string Combat_Weapon::get_name() {return name;}
 
+void Combat_Weapon::set_custom_name(string n) {name = n;}
+
 float Combat_Weapon::get_weight() {return weight;}
 
 float Combat_Weapon::get_dmg() {return damage;}

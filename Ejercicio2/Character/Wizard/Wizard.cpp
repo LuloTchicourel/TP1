@@ -94,6 +94,8 @@ string Wizard::get_name() {return name;}
 
 bool Wizard::is_alive() {return alive;}
 
+void Wizard::set_custom_name(string n) {name = n;}
+
 float Wizard::get_hp() {return hp;}
 
 float Wizard::get_defence() {return defence;}

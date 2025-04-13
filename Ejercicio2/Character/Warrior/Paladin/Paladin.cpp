@@ -9,5 +9,3 @@ Paladin::Paladin(bool l) {
         name = "Lord " + name;
     }
 }
-
-void Paladin::set_custom_name(const string& n) {name = n;}

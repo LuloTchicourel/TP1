@@ -11,4 +11,3 @@ Double_Axe::Double_Axe(bool special){
     }
 }
 
-void Double_Axe::set_custom_name(const string& n) {name = n;}

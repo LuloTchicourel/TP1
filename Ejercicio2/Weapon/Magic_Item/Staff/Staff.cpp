@@ -50,5 +50,3 @@ void Staff::use(){
             break;
     }
 }
-
-void Staff::set_custom_name(const string& n) {name = n;}
