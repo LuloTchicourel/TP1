@@ -9,3 +9,11 @@ find . -name "*.cpp" | xargs g++ -std=c++17 -o ej2
 ./ej2
 
 **Ejercicio 3**
+find . -name "*.cpp" | xargs g++ -std=c++17 -o ej23
+
+./ej3
+
+**Ejercicio 4**
+find . -name "*.cpp" | xargs g++ -std=c++17 -o ej4
+
+./ej4
