@@ -16,6 +16,7 @@
 #include "../Weapon/Combat_Weapon/Spear/Spear.hpp"
 #include "../Weapon/Combat_Weapon/Double_Axe/Double_Axe.hpp"
 
+using namespace std;
 
 unique_ptr<Character> Character_Factory::create_character_by_type(const string& type, const string& weapon) {
     unique_ptr<Character> character;
@@ -41,7 +42,7 @@ unique_ptr<Character> Character_Factory::create_character_by_type(const string& 
     }
 
     if (w) character->add_weapon(std::move(w));
-    return std::move(character);
+    return character;
 }
 
 unique_ptr<Character> Character_Factory::create_random_character() {
@@ -60,14 +61,14 @@ unique_ptr<Character> Character_Factory::create_random_character() {
     return nullptr; 
 }
 
-unique_ptr<Weapon> Character_Factory::create_random_weapon() {
+unique_ptr<Combat_Weapon> Character_Factory::create_random_weapon() {
     int type = rand() % 4;
 
     switch (type) {
-        case 0: return make_unique<Axe>(false);
-        case 1: return make_unique<Sword>(false);
-        case 2: return make_unique<Spear>(false);
-        case 3: return make_unique<Double_Axe>(false);
+        case 0: return make_unique<Axe>();
+        case 1: return make_unique<Sword>();
+        case 2: return make_unique<Spear>();
+        case 3: return make_unique<Double_Axe>();
     }
     return nullptr; 
 }

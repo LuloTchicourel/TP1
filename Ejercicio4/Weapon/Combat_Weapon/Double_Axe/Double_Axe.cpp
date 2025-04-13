@@ -1,7 +1,7 @@
 #include "Double_Axe.hpp"
 
 Double_Axe::Double_Axe(){
-    name = "Double Axe";
+    name = "Double_Axe";
     damage = 10; 
 }
 

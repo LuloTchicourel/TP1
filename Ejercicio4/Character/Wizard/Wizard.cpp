@@ -47,11 +47,10 @@ void Wizard::show_weapon(){
         cout << "No weapons available." << endl;
         return;
     }
-    cout << "== WEAPON ==" << endl;
     weapon->display();
 }
 
-void Wizard::add_weapon(unique_ptr<Weapon> w){
+void Wizard::add_weapon(unique_ptr<Combat_Weapon> w){
     weapon = std::move(w);
     cout << name << " acquired a new weapon!" << endl;
 }
@@ -59,6 +58,11 @@ void Wizard::add_weapon(unique_ptr<Weapon> w){
 void Wizard::remove_weapon(string weapon_name){
     weapon = nullptr;
     cout << "Weapon has been deleted from the inventory." << endl;
+}
+
+Combat_Weapon* Wizard::get_weapon(){
+    if (!weapon) return nullptr;
+    return weapon.get();
 }
 
 void Wizard::display(){

@@ -2,10 +2,10 @@
 #include <memory>
 #include <cstdlib>
 #include <ctime>
-#include "Character/Wizard/Sorcerer/Sorcerer.hpp"
-#include "Character/Warrior/Barbarian/Barbarian.hpp"
-#include "Weapon/Combat_Weapon/Spear/Spear.hpp"
-#include "Weapon/Magic_Item/Potion/Potion.hpp"
+#include "../Character/Wizard/Sorcerer/Sorcerer.hpp"
+#include "../Character/Warrior/Barbarian/Barbarian.hpp"
+#include "../Weapon/Combat_Weapon/Spear/Spear.hpp"
+#include "../Weapon/Magic_Item/Potion/Potion.hpp"
 
 using namespace std;
 

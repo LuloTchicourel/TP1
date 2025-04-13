@@ -1,6 +1,5 @@
 #pragma once
 #include "../Character.hpp"
-#include "../../Weapon/Magic_Item/Magic_Item.hpp"
 #include "../../Weapon/Combat_Weapon/Combat_Weapon.hpp"
 
 class Wizard : public Character {
@@ -9,7 +8,7 @@ protected:
     string name;
     float hp;
     string type = "Wizard";
-    unique_ptr<Weapon> weapon;    
+    unique_ptr<Combat_Weapon> weapon;    
 public:
     Wizard();
 
@@ -22,7 +21,7 @@ public:
     float get_hp() override;
     string get_type() override;
     void show_weapon() override;
-    void add_weapon(unique_ptr<Weapon> weapon) override;
+    void add_weapon(unique_ptr<Combat_Weapon> weapon) override;
     void remove_weapon(string n) override;
     Combat_Weapon* get_weapon() override;
     void display() override;

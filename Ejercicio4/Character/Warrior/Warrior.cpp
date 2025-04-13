@@ -46,11 +46,10 @@ void Warrior::show_weapon(){
         cout << "No weapons available." << endl;
         return;
     }
-    cout << "== WEAPON ==" << endl;
     weapon->display();
 }
 
-void Warrior::add_weapon(unique_ptr<Weapon> w){
+void Warrior::add_weapon(unique_ptr<Combat_Weapon> w){
     weapon = std::move(w);
     cout << name << " acquired a new weapon!" << endl;
 }
@@ -58,6 +57,11 @@ void Warrior::add_weapon(unique_ptr<Weapon> w){
 void Warrior::remove_weapon(string weapon_name){
     weapon = nullptr;
     cout << "Weapon \"" << weapon_name << "\" not found in inventory." << endl;
+}
+
+Combat_Weapon* Warrior::get_weapon(){
+    if (!weapon) return nullptr;
+    return weapon.get();
 }
 
 void Warrior::display(){

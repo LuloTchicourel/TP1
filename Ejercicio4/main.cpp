@@ -8,6 +8,8 @@
 using namespace std;
 
 int main(){
+    srand(time(nullptr));
+
     vector<string> options = {
         "Sorcerer",
         "Warlock",
@@ -29,13 +31,13 @@ int main(){
 
     vector<string> attack_options = {
         "Golpe Fuerte",        // 0
-        "Golpe Rápido",        // 1
+        "Golpe Rapido",        // 1
         "Defensa y Golpe"      // 2
     };
 
     cout << "What type of character do you want? (blank for random)" << endl;
     cout << "Options:" << endl;
-    for (size_t i = 0; i < options.size(); ++i){
+    for (int i = 0; i < options.size(); ++i){
         cout << "  " << i << ". " << options[i] << endl;
     }
     string character_answer;
@@ -43,7 +45,7 @@ int main(){
 
     cout << "What type of weapon? (blank for random)" << endl;
     cout << "Options:" << endl;
-    for (size_t i = 0; i < weapons.size(); ++i){
+    for (int i = 0; i < weapons.size(); ++i){
         cout << "  " << i << ". " << weapons[i] << endl;
     }
     string weapon_answer;
@@ -52,9 +54,11 @@ int main(){
     unique_ptr<Character> character;
 
     if (character_answer.empty()){
+        cout << character_answer << endl;
         character = Character_Factory::create_random_character();
+        cout << character_answer << endl;
         if (weapon_answer.empty()){
-            unique_ptr<Weapon> weapon = Character_Factory::create_random_weapon();
+            unique_ptr<Combat_Weapon> weapon = Character_Factory::create_random_weapon();
             character->add_weapon(std::move(weapon));
         } 
         else {
@@ -63,12 +67,16 @@ int main(){
     }
     else {
         string character_type = options[stoi(character_answer) % 8];
-
+        cout << character_type << endl;
+        cout << character_answer << endl;
         if (weapon_answer.empty()){
-            character = Character_Factory::create_character_by_type(character_type, Character_Factory::create_random_weapon()->get_name());
+            unique_ptr<Combat_Weapon> w = Character_Factory::create_random_weapon();
+            cout << w->get_name();
+            character = Character_Factory::create_character_by_type(character_type, w->get_name());
         } 
         else {
             string weapon_type = weapons[stoi(weapon_answer) % weapons.size()];
+            cout << weapon_type << endl;
             character = Character_Factory::create_character_by_type(character_type, weapon_type);
         }
     }
@@ -84,7 +92,7 @@ int main(){
         cout << "\nPlayer has " << character->get_hp()
         << " HP | AI has " << ai_character->get_hp() << " HP." << endl;
     
-        cout << "Choose your attack: (1) Strong Hit, (2) Quick Hit, (3) Block and Hit: ";
+        cout << "Choose your attack: (0) Golpe Fuerte, (1) Golpe Rapido, (2) Defensa y Golpe: ";
         string input;
         getline(cin, input);
         int player_choice = stoi(input) % 3;
