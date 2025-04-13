@@ -33,3 +33,5 @@ void Spellbook::use(){
     if (player->get_type() == "Wizard") Magic_Item::apply_to("int", effect_strength);
     uses--;
 }
+
+void Spellbook::set_custom_name(const string& n) {name = n;}

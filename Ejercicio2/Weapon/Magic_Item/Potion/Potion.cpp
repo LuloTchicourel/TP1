@@ -31,3 +31,5 @@ void Potion::use(){
     Magic_Item::apply_to("hp", effect_strength);
     uses--;
 }
+
+void Potion::set_custom_name(const string& n) {name = n;}

@@ -3,7 +3,7 @@
 #include <memory>
 #include <cstdlib>
 #include <ctime>
-#include "Character_Factory.hpp"
+#include "Character_Factory/Character_Factory.hpp"
 
 using namespace std;
 

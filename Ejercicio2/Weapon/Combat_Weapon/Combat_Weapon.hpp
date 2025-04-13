@@ -17,7 +17,7 @@ public:
     Combat_Weapon();
 
     string get_name() override;
-    void set_custom_name(string n) override;
+    virtual void set_custom_name(const string& n) = 0;
     float get_weight() override;
     string get_type() override;
     void display() override;

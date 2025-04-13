@@ -9,3 +9,5 @@ Necromancer::Necromancer(bool m) {
         name = "Master " + name;
     }
 }
+
+void Necromancer::set_custom_name(const string& n) {name = n;}

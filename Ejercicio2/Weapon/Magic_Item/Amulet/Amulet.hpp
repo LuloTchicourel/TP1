@@ -6,6 +6,7 @@ public:
     Amulet();
 
     void use() override;
+    void set_custom_name(const string& n) override;
 
     ~Amulet() override = default;
 };
