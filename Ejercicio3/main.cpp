@@ -8,7 +8,7 @@
 using namespace std;
 
 int main(){
-    srand(static_cast<unsigned>(time(nullptr)));
+    srand(time(nullptr));
 
     int num_warriors = 3 + rand() % 5; // rango 3-7
     int num_wizards = 3 + rand() % 5;  // rango 3-7
